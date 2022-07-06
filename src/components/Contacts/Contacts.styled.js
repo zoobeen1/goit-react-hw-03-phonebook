@@ -1,4 +1,4 @@
-import { Box } from 'components/Common';
+import { Box } from '../common';
 
 export const List = ({ children, ...props }) => {
   return (

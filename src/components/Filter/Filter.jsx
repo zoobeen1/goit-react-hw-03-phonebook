@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box } from '../Common';
+import { Box } from '../common';
 export const Filter = ({ filter, onChange }) => {
   return (
     <label>

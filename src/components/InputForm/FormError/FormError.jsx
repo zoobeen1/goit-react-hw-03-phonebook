@@ -1,4 +1,4 @@
-import { ErrorText } from './Form.styled';
+import { ErrorText } from '../Form.styled';
 import { ErrorMessage } from 'formik';
 //Validation Error function
 export function FormError({ name }) {

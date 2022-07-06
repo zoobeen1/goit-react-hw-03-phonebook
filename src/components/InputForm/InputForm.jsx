@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import { Input, FormStyled } from './Form.styled';
-import { Button } from 'components/Common';
+import { Button } from '../common';
 import { FormError } from './FormError';
 import * as yup from 'yup';
 import PropTypes from 'prop-types';

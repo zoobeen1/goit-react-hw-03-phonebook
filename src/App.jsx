@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { InputForm } from './components/Form';
-import { Container } from './components/Common';
+import { InputForm } from './components/InputForm';
+import { Container } from './components/common';
 import { Contacts } from './components/Contacts';
 import { Filter } from './components/Filter';
 

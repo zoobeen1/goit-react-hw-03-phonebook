@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../Common';
+import { Box } from '../common';
 import PropTypes from 'prop-types';
 import { List, ListItem } from './Contacts.styled';
 
