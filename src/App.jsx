@@ -15,7 +15,15 @@ export class App extends Component {
     ],
     filter: '',
   };
-
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    if (contacts) {
+      this.setState({ contacts: JSON.parse(contacts) });
+    }
+  }
+  componentDidUpdate() {
+    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  }
   //Вызывается при отправке формы - возвращает буль от которого зависит сброс формы
   //Буль необходим для реализации проверки дублирующихся записей
   handleSubmit = values => {
