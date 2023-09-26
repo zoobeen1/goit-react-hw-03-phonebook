@@ -16,13 +16,17 @@ export class App extends Component {
     filter: '',
   };
   componentDidMount() {
+    //Считываем контакты из localstorage
     const contacts = localStorage.getItem('contacts');
     if (contacts) {
       this.setState({ contacts: JSON.parse(contacts) });
     }
   }
-  componentDidUpdate() {
-    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  componentDidUpdate(prevProps, prevState) {
+    //Обновляем localstorage только если изменился стэйт
+    if (this.state.contacts.length !== prevState.contacts.length) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
   }
   //Вызывается при отправке формы - возвращает буль от которого зависит сброс формы
   //Буль необходим для реализации проверки дублирующихся записей

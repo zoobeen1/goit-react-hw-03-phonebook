@@ -7,15 +7,17 @@ export const List = ({ children, ...props }) => {
     </Box>
   );
 };
-export const ListItem = ({ children, ...props }) => {
+export const ListItem = ({ children }) => {
   return (
     <Box
-      {...props}
       as="li"
       display="flex"
       justifyContent="space-between"
       fontWeight="500"
-      mb="10px"
+      mb="3px"
+      p="3px"
+      background="#e0e0e0e8"
+      borderRadius="normal"
     >
       {children}
     </Box>
